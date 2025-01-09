@@ -1,15 +1,672 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload Image</title>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>COCOA|DISEASE</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="../static/css/vendor.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="../static/js/modernizr.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
 </head>
-<body>
-    <h1>Upload Cocoa Disease Image</h1>
-    <form method="POST" enctype="multipart/form-data">
-        <input type="file" name="file" accept="image/*">
-        <button type="submit">Predict</button>
-    </form>
+
+<body id="top">
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-logo">
+            <a href="index.html">
+                <img src="../static/images/logo.svg" alt="Homepage">
+            </a>
+        </div>
+
+        <div class="header-content">
+    
+            <nav class="row header-nav-wrap">
+                <ul class="header-nav">
+                    <li><a class="smoothscroll" href="#hero" title="Intro">Home</a></li>
+                    <li><a class="smoothscroll" href="#about" title="About">About</a></li>
+               
+                    <li><a class="smoothscroll" href="#services" title="Works">How It Works</a></li>
+                    <li><a class="smoothscroll" href="#portfolio" title="Services">Disease</a></li>
+                    <li><a href="mailto:#0" title="Contact us">Contact</a></li>
+                </ul>
+            </nav> <!-- end header-nav-wrap -->
+
+            <a href="/login" class="btn btn--stroke btn--small">Get Started</a>
+
+        </div> <!-- end header-content -->
+
+        <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+
+    </header>
+    
+    
+    
+    
+        <!-- hero
+    ================================================== -->
+    <section id="hero" class="s-hero target-section" data-parallax="scroll" data-image-src="../static/bg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+        <div class="row hero-content">
+    
+            <div class="column large-full">
+    
+                <h1>
+                    Welcome to Cocoa Disease Detection, <br>
+                    an advanced AI solution to <br>
+                    protect your cocoa crops from <br>
+                    common diseases.
+                </h1>
+    
+                <ul class="hero-social">
+                    <li>
+                        <a href="#0" title="">Twitter</a>
+                    </li>
+                    <li>
+                        <a href="#0" title="">LinkedIn</a>
+                    </li>
+                    <li>
+                        <a href="#0" title="">Facebook</a>
+                    </li>
+                </ul> <!-- end hero-social -->
+    
+            </div> 
+    
+        </div> <!-- end hero-content -->
+    
+        <div class="hero-scroll">
+            <a href="#about" class="scroll-link smoothscroll">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 24l-8-9h6v-15h4v15h6z"/></svg>
+            </a>
+        </div> <!-- end hero-scroll -->
+    
+    </section> <!-- end s-hero -->
+    
+
+
+    <!-- about
+    ================================================== -->
+    <section id="about" class="s-about target-section">
+
+        <div class="s-about__section s-about__section--profile">
+    
+            <div class="right-vert-line"></div>
+    
+            <div class="row">
+                <div class="column large-6 medium-8 tab-full">
+    
+                    <div class="section-intro" data-num="01" data-aos="fade-up">
+                        <h3 class="subhead">About Our Project</h3>
+                        <h1 class="display-1">We are dedicated to protecting cocoa crops with AI-powered disease detection.</h1>
+                    </div>
+    
+                    <div class="profile-pic" data-aos="fade-up">
+                        <img src="../static/bg.jpg" 
+                             srcset="../static/bg1.jpg 1x, ../static/bg2.jpg 2x" alt="Cocoa Field">
+                    </div>
+    
+                    <h3 data-aos="fade-up">Project Overview</h3>
+    
+                    <p data-aos="fade-up">
+                    Cocoa Disease Detection leverages cutting-edge machine learning technology to identify various diseases affecting cocoa plants, such as Black Pod Rot, Pod Borer, and more. With this tool, farmers can take immediate action to save their crops, reducing the risk of significant losses and ensuring sustainable cocoa production.
+                    </p>
+    
+                </div>
+            </div>
+    
+        </div> <!-- end s-about__section--profile -->
+    
+        <div class="s-about__section">
+    
+            <div class="row">
+                <div class="column">
+                    <h3 data-aos="fade-up">Core Team</h3>
+                </div>
+            </div>
+    
+            <div class="row block-large-1-2 block-900-full work-positions">
+    
+                <div class="column" data-aos="fade-up">
+                    <div class="position">
+                        <div class="position__header">
+                            <h6>
+                                <span class="position__co">Lead Data Scientist</span>
+                                <span class="position__pos">John Doe</span>
+                            </h6>
+                            <div class="position__timeframe">
+                                June 2021 - Present
+                            </div>
+                        </div>
+    
+                        <p>
+                        John spearheads the development of the machine learning algorithms used in our project, focusing on building robust models for accurate disease detection.
+                        </p>
+                    </div>
+                </div> <!-- end column -->
+                <div class="column" data-aos="fade-up">
+                    <div class="position">
+                        <div class="position__header">
+                            <h6>
+                                <span class="position__co">Agricultural Expert</span>
+                                <span class="position__pos">Jane Smith</span>
+                            </h6>
+                            <div class="position__timeframe">
+                                August 2019 - Present
+                            </div>
+                        </div>
+    
+                        <p>
+                        Jane provides critical insights into cocoa diseases, ensuring that the AI models are tailored to detect real-world issues affecting cocoa farms.
+                        </p>
+                    </div>
+                </div> <!-- end column -->
+                <div class="column" data-aos="fade-up">
+                    <div class="position">
+                        <div class="position__header">
+                            <h6>
+                                <span class="position__co">Software Engineer</span>
+                                <span class="position__pos">Michael Lee</span>
+                            </h6>
+                            <div class="position__timeframe">
+                                April 2020 - Present
+                            </div>
+                        </div>
+    
+                        <p>
+                        Michael develops the platform that makes disease detection easily accessible to farmers through a simple, user-friendly interface.
+                        </p>
+                    </div>
+                </div> <!-- end column -->
+                <div class="column" data-aos="fade-up">
+                    <div class="position">
+                        <div class="position__header">
+                            <h6>
+                                <span class="position__co">UX/UI Designer</span>
+                                <span class="position__pos">Sophia Martinez</span>
+                            </h6>
+                            <div class="position__timeframe">
+                                June 2020 - Present
+                            </div>
+                        </div>
+    
+                        <p>
+                        Sophia designs the user interface that ensures ease of use, allowing farmers to quickly upload images and receive diagnostic results in real time.
+                        </p>
+                    </div>
+                </div> <!-- end column -->
+    
+            </div> <!-- work positions -->
+    
+        </div> <!-- end s-about__section -->
+    
+    </section> <!-- end s-about -->
+    
+
+    <!-- services
+    ================================================== -->
+    <section id="services" class="s-services target-section h-dark-bg">
+        <div class="row s-services__content">
+            <div class="vert-line"></div>
+    
+            <div class="column large-6 s-services__leftcol">
+                <div class="section-intro" data-num="02" data-aos="fade-up">
+                    <h3 class="subhead">How It Works</h3>
+                    <h1 class="display-1">
+                        Farmers log in and upload images for predictions.
+                    </h1>
+                </div>
+    
+                <p class="lead" data-aos="fade-up">
+                    Our platform allows farmers to easily log in and upload images of their crops or livestock.
+                    Using advanced prediction algorithms, we analyze the uploaded images to provide valuable 
+                    recommendations tailored to their needs. Additionally, our translation feature ensures 
+                    that language is no barrier to accessing important information.
+                </p>
+            </div> <!-- end s-services--leftcol -->
+    
+            <div class="column large-6">
+                <ul class="services-list" data-aos="fade-up">
+                    <li class="services-list__item is-active">
+                        <div class="services-list__item-header">
+                            <h5>Image Upload</h5>
+                        </div>
+                        <div class="services-list__item-body">
+                            <p>
+                                Farmers can upload images of their crops or livestock for analysis, making it easy to 
+                                receive insights and recommendations.
+                            </p>
+                        </div>
+                    </li> <!-- services-list__item -->
+                    <li class="services-list__item">
+                        <div class="services-list__item-header">
+                            <h5>Prediction Analysis</h5>
+                        </div>
+                        <div class="services-list__item-body">
+                            <p>
+                                Our system predicts potential issues with crops or livestock, helping farmers make informed decisions.
+                            </p>
+                        </div>
+                    </li> <!-- services-list__item -->
+                    <li class="services-list__item">
+                        <div class="services-list__item-header">
+                            <h5>Personalized Recommendations</h5>
+                        </div>
+                        <div class="services-list__item-body">
+                            <p>
+                                Based on the analysis, we provide tailored recommendations to improve productivity and health.
+                            </p>
+                        </div>
+                    </li> <!-- services-list__item -->
+                    <li class="services-list__item">
+                        <div class="services-list__item-header">
+                            <h5>Translation Services</h5>
+                        </div>
+                        <div class="services-list__item-body">
+                            <p>
+                                Our translation feature ensures that farmers can access information in their preferred language, 
+                                making the platform more accessible.
+                            </p>
+                        </div>
+                    </li> <!-- services-list__item -->
+                </ul> <!-- end services-list -->
+            </div>
+    
+        </div> <!-- s-services__content -->
+    
+    </section> <!-- end s-services -->
+    
+
+    <!-- portfolio
+    ================================================== -->
+    <section id="portfolio" class="s-portfolio target-section">
+
+        <div class="row s-portfolio__header">
+            <div class="column large-6 medium-8 tab-full">
+                <div class="section-intro" data-num="03" data-aos="fade-up">
+                    <h3 class="subhead">Portfolio</h3>
+                    <h1 class="display-1">
+                        A selection of recent projects I have worked on.
+                    </h1>
+                </div>
+            </div>
+        </div> <!-- s-porfolio__header -->
+
+        <div class="row s-porfolio__list block-large-1-2 block-tab-full collapse">
+
+            <div class="column" data-aos="fade-up">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" href="../static/images/portfolio/gallery/g-windows-in-the-city.jpg" title="Windows in The City" data-size="1050x700">
+                            <img src="../static/images/portfolio/windows-in-the-city.jpg" 
+                                 srcset="../static/images/portfolio/windows-in-the-city.jpg 1x, ../static/images/portfolio/windows-in-the-city@2x.jpg 2x" alt="">
+                        </a>
+                    </div>
+                    <div class="folio-item__info">
+                        <div class="folio-item__cat">Branding</div>
+                        <h4 class="folio-item__title">Windows in The City</h4>
+                    </div>
+                    <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
+                    <div class="folio-item__caption">
+                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                    </div>
+                </div>
+            </div> <!-- end column -->
+            <div class="column" data-aos="fade-up">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" href="../static/images/portfolio/gallery/g-building-blocks.jpg" title="Building Blocks" data-size="1050x700">
+                            <img src="../static/images/portfolio/building-blocks.jpg" 
+                                 srcset="../static/images/portfolio/building-blocks.jpg 1x, ../static/images/portfolio/building-blocks@2x.jpg 2x" alt="">
+                        </a>
+                    </div>
+                    <div class="folio-item__info">
+                        <div class="folio-item__cat">Frontend Design</div>
+                        <h4 class="folio-item__title">Building Blocks</h4>
+                    </div>
+                    <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
+                    <div class="folio-item__caption">
+                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                    </div>
+                </div>
+            </div> <!-- end column -->
+            <div class="column" data-aos="fade-up">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" href="../static/images/portfolio/gallery/g-shout-jump.jpg" Title="Shout and Jump" data-size="1050x700">
+                            <img src="../static/images/portfolio/shout-and-jump.jpg" 
+                                 srcset="../static/images/portfolio/shout-and-jump.jpg 1x, ../static/images/portfolio/shout-and-jump@2x.jpg 2x" alt="">
+                        </a>
+                    </div>
+                    <div class="folio-item__info">
+                        <div class="folio-item__cat">Branding</div>
+                        <h4 class="folio-item__title">Shout & Jump</h4>
+                    </div>
+                    <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
+                    <div class="folio-item__caption">
+                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                    </div>
+                </div>
+            </div> <!-- end column -->
+            <div class="column" data-aos="fade-up">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" href="../static/images/portfolio/gallery/g-sand-dunes.jpg" title="Sand Dunes" data-size="1050x700">
+                            <img src="../static/images/portfolio/sand-dunes.jpg" 
+                                 srcset="../static/images/portfolio/sand-dunes.jpg 1x, ../static/images/portfolio/sand-dunes@2x.jpg 2x" alt="">
+                        </a>
+                    </div>
+                    <div class="folio-item__info">
+                        <div class="folio-item__cat">Frontend Design</div>
+                        <h4 class="folio-item__title">Sand Dunes</h4>
+                    </div>
+                    <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
+                    <div class="folio-item__caption">
+                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                    </div>
+                </div>
+            </div> <!-- end column -->
+            <div class="column" data-aos="fade-up">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" href="../static/images/portfolio/gallery/g-woodcraft.jpg" title="Sand Dunes" data-size="1050x700">
+                            <img src="../static/images/portfolio/woodcraft.jpg" 
+                                 srcset="../static/images/portfolio/woodcraft.jpg 1x, ../static/images/portfolio/woodcraft@2x.jpg 2x" alt="">
+                        </a>
+                    </div>
+                    <div class="folio-item__info">
+                        <div class="folio-item__cat">Product Design</div>
+                        <h4 class="folio-item__title">Wooocraft</h4>
+                    </div>
+                    <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
+                    <div class="folio-item__caption">
+                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                    </div>
+                </div>
+            </div> <!-- end column -->
+            <div class="column" data-aos="fade-up">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" href="../static/images/portfolio/gallery/g-lamp.jpg" title="The Lamp" data-size="1050x700">
+                            <img src="../static/images/portfolio/lamp.jpg" 
+                                 srcset="../static/images/portfolio/lamp.jpg 1x, ../static/images/portfolio/lamp@2x.jpg 2x" alt="">
+                        </a>
+                    </div>
+                    <div class="folio-item__info">
+                        <div class="folio-item__cat">Product Design</div>
+                        <h4 class="folio-item__title">The Lamp</h4>
+                    </div>
+                    <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
+                    <div class="folio-item__caption">
+                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                    </div>
+                </div>
+            </div> <!-- end column -->
+
+        </div> <!-- folio-list -->
+
+    </section> <!-- end portfolio -->
+
+
+    <!-- testimonials
+    ================================================== -->
+    <section id="testimonials" class="s-testimonials">
+
+        <div class="row collapse">
+
+            <div class="column large-full">
+
+                <div class="testimonial-slider" data-aos="fade-up">
+
+                    <div class="testimonial-slider__slide">
+                        <p>
+                        Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas tempore rem. 
+                        Explicabo a quaerat sint autem dolore ducimus ut consequatur neque.  Nisi dolores quaerat fuga rem nihil nostrum.
+                        Laudantium quia consequatur molestias delectus culpa.
+                        </p>
+                        <div class="testimonial-slider__author">
+                            <img src="../static/images/avatars/user-02.jpg" alt="Author image" class="testimonial-slider__avatar">
+                            <cite class="testimonial-slider__cite">
+                                <strong>Tim Cook</strong>
+                                <span>CEO, Apple</span>
+                            </cite>
+                        </div>
+                    </div> <!-- end testimonials__slide -->
+    
+                    <div class="testimonial-slider__slide">
+                        <p>
+                        Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.
+                        Nisi eaque consequatur. Voluptatem dignissimos ut ducimus accusantium perspiciatis.
+                        Quasi voluptas eius distinctio. Atque eos maxime.
+                        </p>
+                        <div class="testimonial-slider__author">
+                            <img src="../static/images/avatars/user-01.jpg" alt="Author image" class="testimonial-slider__avatar">
+                            <cite class="testimonial-slider__cite">
+                                <strong>Sundar Pichai</strong>
+                                <span>CEO, Google</span>
+                            </cite>
+                        </div>
+                    </div> <!-- end testimonials__slide -->
+    
+                    <div class="testimonial-slider__slide">
+                        <p>
+                        Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.  
+                        Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.
+                        Voluptatem dignissimos ut.
+                        </p>
+                        <div class="testimonial-slider__author">
+                            <img src="../static/images/avatars/user-04.jpg" alt="Author image" class="testimonial-slider__avatar">
+                            <cite class="testimonial-slider__cite">
+                                <strong>Satya Nadella</strong>
+                                <span>CEO, Microsoft</span>
+                            </cite>
+                        </div>
+                    </div> <!-- end testimonials__slide -->
+    
+                    <div class="testimonial-slider__slide">
+                        <p>
+                        Nunc interdum lacus sit amet orci. Vestibulum dapibus nunc ac augue. Fusce vel dui. In ac felis 
+                        quis tortor malesuada pretium. Curabitur vestibulum aliquam leo. Qui sed at corrupti expedita voluptas odit. 
+                        Nihil ea quia nesciunt. Ducimus aut sed ipsam.
+                        </p>
+                        <div class="testimonial-slider__author">
+                            <img src="../static/images/avatars/user-05.jpg" alt="Author image" class="testimonial-slider__avatar">
+                            <cite class="testimonial-slider__cite">
+                                <strong>Jeff Bezos</strong>
+                                <span>CEO, Amazon</span>
+                            </cite>
+                        </div>
+                    </div> <!-- end testimonials__slide -->
+
+                </div> <!-- end testimonial slider -->
+                
+            </div> <!-- end column -->
+
+        </div> <!-- end row -->
+
+
+        <!-- CTA
+        ================================================== -->
+        <div class="s-cta">
+
+            <div class="row">
+                <div class="column large-full">
+                    <h2 class="section-desc" data-aos="fade-up">
+                        Need a great reliable web hosting?
+                    </h2>
+                </div>
+            </div>
+    
+            <div class="row cta-content" data-aos="fade-up">
+                <div class="column large-full">
+                    <p>
+                    We highly recommend <a href="https://www.dreamhost.com/r.cgi?287326">DreamHost</a>.
+                    Powerful web and Wordpress hosting. Guaranteed.
+                    Starting at $2.95 per month.
+                    </p>
+    
+                    <a href="https://www.dreamhost.com/r.cgi?287326" class="btn btn--primary h-full-width">Get Started</a>
+                </div>
+            </div> <!-- end cta-content -->
+    
+        </div> <!-- end s-cta -->
+
+
+    </section> <!-- end s-testimonials -->
+
+
+    <!-- footer
+    ================================================== -->
+    <footer class="s-footer h-dark-bg">
+        
+        <div class="right-vert-line"></div>
+
+        <div class="row s-footer__main">
+            <div class="column large-6">
+                <div class="section-intro" data-aos="fade-up">
+                    <h3 class="subhead">Get In Touch</h3>
+
+                    <h1 class="display-1">
+                    Have an idea or a concept that really excite you?
+                    Let's turn that idea into reality. Shoot me a message.
+                    </h1>
+                </div>
+
+                <div class="footer-email-us">
+                    <a href="mailto:#0" class="btn btn--primary h-full-width">Let's Talk</a>
+                </div>
+            </div>
+
+            <div class="column large-5">
+                <div class="footer-contacts">
+                    <div class="footer-contact-block" data-aos="fade-up">
+                        <h5 class="footer-contact-block__header">
+                            Email
+                        </h5>
+                        <p class="footer-contact-block__content">
+                            <a href="mailto:#0">sayhello@ethos.com</a>
+                        </p>
+                    </div> <!-- end footer-contact-block -->
+                    <div class="footer-contact-block" data-aos="fade-up">
+                        <h5 class="footer-contact-block__header">
+                            Phone
+                        </h5>
+                        <p class="footer-contact-block__content">
+                            <a href="tel:+1975432345">+197 543 2345</a>
+                        </p>
+                    </div> <!-- end footer-contact-block -->
+                    <br>
+                    <div class="footer-contact-block" data-aos="fade-up">
+                        <h5 class="footer-contact-block__header">
+                            Social
+                        </h5>
+                        <ul class="footer-contact-block__list">
+                            <li><a href="#0">Twitter</a></li>
+                            <li><a href="#0">Instagram</a></li>
+                            <li><a href="#0">Behance</a></li>
+                            <li><a href="#0">Dribbble</a></li>
+                        </ul>
+                    </div> <!-- end footer-contact-block -->
+                </div>
+            </div>
+        </div> <!-- end s-footer__main -->
+
+        <div class="row s-footer__bottom">
+            <div class="column large-full ss-copyright">
+                <span>© Copyright Ethos 2019</span> 
+                <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
+            </div> <!-- end ss-copyright -->
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0l8 9h-6v15h-4v-15h-6z"/></svg>
+                </a>
+            </div> <!-- end ss-go-top -->
+        </div> <!-- end s-footer__bottom -->
+
+    </footer> <!-- end s-footer -->
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- end photoSwipe background -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="../static/js/jquery-3.2.1.min.js"></script>
+    <script src="../static/js/plugins.js"></script>
+    <script src="../static/js/main.js"></script>
+
 </body>
-</html>

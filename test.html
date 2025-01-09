@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Translation</title>
+</head>
+<body>
+    <h1>Hello, Welcome to the Translation App!</h1>
+    <p>Select your preferred language:</p>
+    <select id="languageSelect" onchange="translatePage()">
+        <option value="en">English</option>
+        <option value="kn">Kannada</option>
+        <option value="hi">Hindi</option>
+        <option value="ml">Malayalam</option>
+    </select>
+    <div id="content">
+        <p>This is a sample content that will be translated.</p>
+    </div>
+
+    <script>
+        function translatePage() {
+            const language = document.getElementById("languageSelect").value;
+
+            fetch("/translate", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ language: language })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.translated_html) {
+                    document.body.innerHTML = data.translated_html;
+                } else if (data.error) {
+                    console.error("Translation error:", data.error);
+                    alert("Translation failed: " + data.error);
+                }
+            })
+            .catch(error => console.error("Error:", error));
+        }
+    </script>
+</body>
+</html>
