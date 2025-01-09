@@ -1,1 +1,3 @@
 # Cocoa-Disease-Detection
+The platform aims to empower farmers by addressing critical agricultural challenges through advanced technologies like Natural Language Processing (NLP) and Machine Learning (ML). It allows farmers to submit images of crop issues, enabling the identification and prediction of crop diseases. The model sends the requested queries to the scientists if the image is not validated for further response and solutions when image accuracy falls under 90%. Beyond disease detection, it offers real time notifications of the queries to the scientists and recommended prediction and solutions to the user in the preferred  Kannada language. This innovative approach helps build connectivity and understanding between the farmers and scientists.
+
